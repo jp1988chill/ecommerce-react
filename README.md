@@ -63,3 +63,22 @@ $ yarn build
 * Firebase auth provider authentication
 * Account creation and edit
 
+
+-
+
+Run in NPM 2023:
+
+npm install --legacy-peer-deps
+
+npm audit fix --force
+
+npm audit fix --legacy-peer-deps
+
+npm install firebase
+
+npm run-script dev
+
+npm run-script build
+
+npm run-script serve
+
