@@ -77,9 +77,7 @@ npm install --legacy-peer-deps
 
 npm audit fix --force
 
-npm audit fix --legacy-peer-deps
-
-npm install firebase
+npm install firebase --force
 
 npm run-script dev
 
