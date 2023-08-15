@@ -63,10 +63,15 @@ $ yarn build
 * Firebase auth provider authentication
 * Account creation and edit
 
-
 -
 
-Run in NPM 2023:
+
+////////////////////////////////////////////Set up Edge + ReactJS + NodeJS + VSCode Debugger:////////////////////////////////////////////
+
+-Install VSCode
+
+//////////////////////////////////////////////////////////NodeJS Setup/////////////////////////////////////////////////////////
+-Install NodeJS then Run in NPM Console (2023):
 
 npm install --legacy-peer-deps
 
@@ -81,4 +86,41 @@ npm run-script dev
 npm run-script build
 
 npm run-script serve
+//////////////////////////////////////////////////////////NodeJS Setup End//////////////////////////////////////////////
+
+-Install Edge
+
+In VSCode install the following extensions:
+
+- Angular Extension Pack
+- Angular Essentials (Version 13)
+- Angular Language Services
+- Angular Snippets (Version 13)
+- Angular Files
+- Microsoft Edge Tools for VS Code
+- Prettier - Code formatter
+
+
+Then open "Run and Debug" tab on the left, open JSON Settings (on the bottom right), wipe it and paste the below JSON:
+
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Launch Edge against localhost",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
+
+- Now build ReactJS on a separate commandline, must be live, at http://localhost:4200
+- Now go to "Run and Debug" tab on VSCode, on the left sidebar, and select "Launch Edge and attach DevTools".
+- From now on, to compile and debug a ReactJS session, press the green play button next to "Run And Debug" tab. 
+  An Edge window will open, and you can now use the VSCode "Explorer" on the left tab, to open an Angular file, and add
+  a breakpoint and trace the application realtime
+
+//////////////////////////////////////////// END ////////////////////////////////////////////
 
