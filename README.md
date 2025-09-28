@@ -9,12 +9,6 @@ Simple ecommerce react js app with firebase [typescript].
 ![Salinaka screenshot](https://raw.githubusercontent.com/jgudo/ecommerce-react/master/static/screeny3.png)
 ![Salinaka screenshot](https://raw.githubusercontent.com/jgudo/ecommerce-react/master/static/screeny7.png)
 
-## Run Locally
-### 1. Install Dependencies
-```sh
-$ yarn install
-```
-
 ### 2. Create a new firebase project
 Login to your google account and create a new firebase project [here](https://console.firebase.google.com/u/0/)
 
@@ -36,18 +30,6 @@ VITE_FIREBASE_APP_ID=234598789798798fg3-034
 After setting up necessary configuration,
 create a **Database** and choose **Cloud Firestore** and start in test mode
 
-### 3. Run development server
-```sh 
-$ yarn dev
-```
-
----
-
-## Build the project
-```sh
-$ yarn build
-```
-
 ## How to add products or perform CRUD operations for Admin
 1. Navigate to your site to `/signup`
 2. Create an account for yourself
@@ -65,60 +47,44 @@ $ yarn build
 
 -
 
-
 ////////////////////////////////////////////Set up Edge + ReactJS + NodeJS + VSCode Debugger:////////////////////////////////////////////
 
--Install VSCode
+Stable: Windows 10 x64 / Windows 11 x64
 
-//////////////////////////////////////////////////////////NodeJS Setup/////////////////////////////////////////////////////////
--Install NodeJS then Run in NPM Console (2023):
+Setup:
+-Install Microsoft Edge
+-Install NodeJS: https://nodejs.org/en/download (x64 .msi LTS), check "Automatically install the necessary tools. ...", & next to everything.
+-Install VSCode 
+-Install these VSCode extensions:
+	-Angular Extension Pack
+	-Angular Essentials
+	-Angular Language Services
+	-Angular Snippets
+	-Angular Files
+	-Microsoft Edge Tools for VS Code
+	-Prettier - Code formatter
 
-npm install --legacy-peer-deps
+Now open VSCode, Open Folder: /my-app, click on Terminal -> New Terminal & run the following commands in terminal:
+-rm -rf node_modules
+-rm -rf package-lock.json
+-npm install -g npm
+-npm install firebase --force
+-npm install express --force
+-npm install body-parser --force
+-npm cache clean --force 
+-npm install --save-dev @babel/preset-react @babel/preset-env --force
+-npm i --force
+-npm run-script build
 
-npm audit fix --force
+Close VSCode terminal.
 
-npm install firebase --force
+(Default) Open VSCode, Open Folder: /my-app, click on Terminal -> New Terminal & Run:
+-cd my-app
+-npm run-script dev
 
-npm run-script dev
+(Optional, Unit test) Open VSCode, Open Folder: /my-app, click on Terminal -> New Terminal & Run:
+-cd my-app
+-npm test
 
-npm run-script build
-
-npm run-script serve
-//////////////////////////////////////////////////////////NodeJS Setup End//////////////////////////////////////////////
-
--Install Edge
-
-In VSCode install the following extensions:
-
-- Angular Extension Pack
-- Angular Essentials (Version 13)
-- Angular Language Services
-- Angular Snippets (Version 13)
-- Angular Files
-- Microsoft Edge Tools for VS Code
-- Prettier - Code formatter
-
-
-Then open "Run and Debug" tab on the left, open JSON Settings (on the bottom right), wipe it and paste the below JSON:
-
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "msedge",
-      "request": "launch",
-      "name": "Launch Edge against localhost",
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}"
-    }
-  ]
-}
-
-- Now build ReactJS on a separate commandline, must be live, at http://localhost:4200
-- Now go to "Run and Debug" tab on VSCode, on the left sidebar, and select "Launch Edge and attach DevTools".
-- From now on, to compile and debug a ReactJS session, press the green play button next to "Run And Debug" tab. 
-  An Edge window will open, and you can now use the VSCode "Explorer" on the left tab, to open an Angular file, and add
-  a breakpoint and trace the application realtime
-
-//////////////////////////////////////////// END ////////////////////////////////////////////
+Now press F5 in VSCode. React will be debugged through the VSCode IDE.
 
